@@ -1,38 +1,192 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: 'Righteous', cursive;
+  color: #d14f4f;
+  line-height: 1.7;
+  font-size: 19px;
+  background-color: #222222;
+  background-image: url("https://cdn.spacetelescope.org/archives/images/thumb700x/heic1007a.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  background-color: rgba(22, 22, 22, 0.8);
+  display: flex;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.link {
+  color: #efefef;
+  display: inline-block;
+  padding: 3px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s ease all;
+}
+
+.link:hover {
+  color: #f59494;
+  transform: scale(1.1);
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #2222229c;
+
+}
+
+.nasa-photo {
+  display: flex;
+  padding: 40px;
+  margin: 0 auto;
+  max-height: 100%;
+  background-color: #2222229c;
+}
+
+.nasa-photo img {
+  width: 50%;
+  margin-right: 50px;
+  object-fit: contain;
+  max-height: 80vh;
+}
+
+
+.nasa-photo .explanation {
+  color: #bbb;
+}
+.nasa-photo .date {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1280px) {
+  .nasa-photo {
+    display: block;
+  }
+
+  .nasa-photo img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home  {
   display: flex;
-  flex-direction: column;
+  height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* .home-link {
+  font-size: 40px;
+  background: #f59494;
+  padding: 40px 80px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  text-transform: uppercase;
+  margin: 50px 0;
+  position: relative;
+  display: block;
+  color: red;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid red;
+  border-left: 100px solid transparent;
+  transform: rotate(35deg);
 }
+#home-link:before {
+  border-bottom: 80px solid red;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -45px;
+  left: -65px;
+  display: block;
+  content: '';
+  transform: rotate(-35deg);
+}
+#home-link:after {
+  position: absolute;
+  display: block;
+  color: red;
+  top: 3px;
+  left: -105px;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid red;
+  border-left: 100px solid transparent;
+  transform: rotate(-70deg);
+  content: '';
+} */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+            
+.home-link {
+  position: relative;
+  display: block;
+  width: 0px;
+  height: 0px;
+  margin: 50px 0;
+  color: #32557f;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid #32557f;
+  transform: rotate(35deg);
+  /* z-index: -1; */
+}
+  .home-link::before {
+    content: '';
+    position: absolute;
+    top: -45px;
+    left: -65px;
+    display: block;
+    height: 0;
+    width: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 80px solid #32557f;
+    transform: rotate(-35deg);
+    /* z-index: -1; */
   }
-  to {
-    transform: rotate(360deg);
+
+  .home-link::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: -105px;
+    display: block;
+    width: 0px;
+    height: 0px;
+    color: #32557f;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid #32557f;
+    transform: rotate(-70deg);
+    /* z-index: -1; */
   }
+
+  p {
+    display: flex;
+    z-index: 1;
+    color: #32557f;
+    text-orientation: upright;
+    font-size: 25px;
+  }
+
+.home-link::hover {
+  border-radius: 5px;
+  background: #e77171;
 }
